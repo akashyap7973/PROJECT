@@ -1,0 +1,97 @@
+.main {
+  padding: 48px 20px 80px;
+}
+
+
+.hero {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.page-title {
+  font-size: 40px;
+  font-weight: 800;
+  color: #1a1a2e;
+  margin-bottom: 10px;
+}
+
+.page-subtitle {
+  font-size: 15px;
+  color: #999;
+}
+
+
+.planner-card {
+  max-width: 1100px;
+  margin: 0 auto;
+  background-color: #ffffff;
+  border-radius: 16px;
+  padding: 32px 28px 48px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+}
+
+
+.input-row {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.input-task {
+  flex: 1;
+  padding: 14px 18px;
+  border: 1px solid #dce1e9;
+  border-radius: 10px;
+  font-size: 15px;
+  font-family: inherit;
+  color: #1a1a2e;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.input-task::placeholder {
+  color: #bbb;
+}
+
+.input-task:focus {
+  border-color: #7c5cfc;
+}
+
+
+.input-time {
+  flex: 1;
+  padding: 14px 18px;
+  border: 1px solid #dce1e9;
+  border-radius: 10px;
+  font-size: 15px;
+  font-family: inherit;
+  color: #1a1a2e;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.input-time::placeholder {
+  color: #bbb;
+}
+
+.input-time:focus {
+  border-color: #7c5cfc;
+}
+
+
+.btn-add {
+  padding: 14px 32px;
+  background: linear-gradient(135deg, #7c5cfc, #a855f7);
+  color: #ffffff;
+  font-size: 15px;
+  font-weight: 600;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: opacity 0.2s;
+}
+
+.btn-add:hover {
+  opacity: 0.88;
+}
