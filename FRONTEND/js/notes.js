@@ -1,14 +1,14 @@
 document.addEventListener("DOMContentLoaded", () => {
 
-    // ✅ Load notes from localStorage
+    //  Load notes from localStorage
     let notes = JSON.parse(localStorage.getItem("dlm-notes")) || [];
 
-    // ✅ Select elements (match HTML classes)
+    //  Select elements (match HTML classes)
     const notesInput = document.querySelector(".note-input");
     const addNoteBtn = document.querySelector(".btn-save");
     const notesList = document.querySelector(".notes-list");
 
-    // ✅ Render Notes Function
+    //  Render Notes Function
     function renderNotes() {
         notesList.innerHTML = "";
 
@@ -31,11 +31,11 @@ document.addEventListener("DOMContentLoaded", () => {
             notesList.appendChild(li);
         });
 
-        // ✅ Save updated notes
+        //  Save updated notes
         localStorage.setItem("dlm-notes", JSON.stringify(notes));
     }
 
-    // ✅ Add Note
+    //  Add Note
     addNoteBtn.addEventListener("click", () => {
         const title = notesInput.value.trim();
 
@@ -50,7 +50,7 @@ document.addEventListener("DOMContentLoaded", () => {
         renderNotes();
     });
 
-    // ✅ Handle checkbox + delete
+    //  Handle checkbox + delete
     notesList.addEventListener("click", (e) => {
         const index = e.target.getAttribute("data-index");
 
@@ -69,6 +69,6 @@ document.addEventListener("DOMContentLoaded", () => {
         renderNotes();
     });
 
-    // ✅ Initial render
+    //  Initial render
     renderNotes();
 });

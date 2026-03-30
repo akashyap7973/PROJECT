@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="progress.css">
-    <script src="js/progess.html"></script>
+    <link rel="stylesheet" href"css/progress.css">
+    <script src="js/progress.js"></script>
     <link rel="css/global.css stylesheet" href="global.css">
     <link rel="js/global.js stylesheet" href="global.js">
 </head>
@@ -22,72 +22,39 @@
     <title>Document</title>
 </head>
 <body>
-    <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Daily Manager – Progress</title>
-  <link rel="stylesheet" href="progress.css" />
-</head>
-<body>
-
-<nav class="navbar">
-    <div class="logo">
-            Daily Manager
-        </div>
-          <ul class="nav-links">
-        <li><a href="index.html">Dashboard</a></li>
-        <li><a href="habits.html">Habits</a></li>
-        <li><a href="planner.html">Planner</a></li>
-        <li><a href="notes.html">Notes</a></li>
-        <li><a href="progress.html">Progress</a></li>
-        <li><a href="profile.html">Profile</a></li>
-    </ul>
+     <nav class="navbar">
+        <div class="logo">Daily Manager</div>
+        <ul class="nav-links">
+            <li><a href="index.html">Dashboard</a></li>
+            <li><a href="habits.html">Habits</a></li>
+            <li><a href="planner.html">Planner</a></li>
+            <li><a href="notes.html">Notes</a></li>
+            <li><a href="progress.html">Progress</a></li>
+            <li><a href="profile.html">Profile</a></li>
+        </ul>
     </nav>
 
-  <main class="main">
+    <main class="container fade-in">
+        <header class="page-header">
+            <h1>Your Progress</h1>
+            <p>See how well you're doing today.</p>
+        </header>
 
-  
-    <section class="hero">
-      <h1 class="page-title">Your Progress</h1>
-      <p class="page-subtitle">See how well you're doing today.</p>
-    </section>
+        <div class="grid-3" style="justify-content: center; align-items: stretch;">
+            <div class="card" style="text-align: center;">
+                <h3 style="margin-bottom: 1.5rem;">Habits Completion</h3>
+                <div class="progress-circle" id="habits-circle" style="--percentage: 0%;">
+                    <span class="progress-text">0%</span>
+                </div>
+                <p id="habits-progress" style="color: var(--text-muted); font-weight: 500;">0 / 0 Completed</p>
+            </div>
 
-  
-    <div class="cards">
-
-      
-      <div class="card">
-        <h2 class="card-title">Habits Completion</h2>
-
-        <div class="ring-wrapper">
-          <svg class="ring" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
-            <circle class="ring-bg" cx="60" cy="60" r="50"/>
-            <circle class="ring-fill" cx="60" cy="60" r="50"
-              stroke-dasharray="314"
-              stroke-dashoffset="314"/>
-          </svg>
-          <span class="ring-label">0%</span>
+            <div class="card" style="text-align: center; display: flex; flex-direction: column; justify-content: center;">
+                <h3 style="margin-bottom: 1rem;">Tasks Scheduled Today</h3>
+                <p id="tasks-progress" style="font-size: 3rem; color: var(--secondary); font-weight: 700;">0</p>
+                <p style="color: var(--text-muted); margin-top: 1rem;">Keep up the momentum!</p>
+            </div>
         </div>
-
-        <p class="card-sub">0 / 0 Completed</p>
-      </div>
-
-      
-      <div class="card">
-        <h2 class="card-title">Tasks Scheduled Today</h2>
-        <p class="total-tasks">0 Total Tasks</p>
-        <p class="card-sub">Keep up the momentum!</p>
-      </div>
-
-    </div>
-  </main>
-
-</body>
-</html>
-</body>
-</html>
-
+    </main>
 </body>
 </html>

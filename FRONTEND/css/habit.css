@@ -1,167 +1,107 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+/* Habit Lists */
+.item-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
 }
 
-body {
-  font-family: sans-serif;
-  background-color: #f0f4f8;
-  color: #1a1a2e;
+.list-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius);
+    transition: var(--transition);
 }
 
-
-.navbar {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 16px 48px;
-  background-color: #ffffff;
-  border-bottom: 1px solid #e2e8f0;
+.list-item:hover {
+    background-color: #f1f5f9;
 }
 
-.nav-brand {
-  font-size: 18px;
-  font-weight: 700;
-  color: #6c47ff;
+.list-item.completed {
+    opacity: 0.7;
+    background-color: #f8fafc;
 }
 
-.nav-links {
-  list-style: none;
-  display: flex;
-  gap: 40px;
+.list-item.completed span {
+    text-decoration: line-through;
+    color: var(--text-muted);
 }
 
-.nav-links a {
-  text-decoration: none;
-  color: #666;
-  font-size: 15px;
+.item-left {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
 }
 
-.nav-links a.active {
-  background-color: #e8e3ff;
-  color: #6c47ff;
-  padding: 6px 18px;
-  border-radius: 8px;
-  font-weight: 500;
+input[type="checkbox"] {
+    width: 1.2rem;
+    height: 1.2rem;
+    accent-color: var(--primary);
+    cursor: pointer;
 }
-
-
-.main {
-  padding: 48px 20px 80px;
-}
-
-
-.hero {
-  text-align: center;
-  margin-bottom: 40px;
-}
-
-.page-title {
-  font-size: 40px;
-  font-weight: 800;
-  color: #1a1a2e;
-  margin-bottom: 10px;
-}
-
-.page-subtitle {
-  font-size: 15px;
-  color: #999;
-}
-
-
-.habits-card {
-  max-width: 1100px;
-  margin: 0 auto;
-  background-color: #ffffff;
-  border-radius: 16px;
-  padding: 32px 28px 48px;
-  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
-}
-
-
-.input-row {
-  display: flex;
-  align-items: center;
-  gap: 16px;
-}
-
-.input-habit {
-  flex: 1;
-  padding: 14px 18px;
-  border: 1px solid #dce1e9;
-  border-radius: 10px;
-  font-size: 15px;
-  font-family: inherit;
-  color: #1a1a2e;
-  outline: none;
-  transition: border-color 0.2s;
-}
-
-.input-habit::placeholder {
-  color: #bbb;
-}
-
-.input-habit:focus {
-  border-color: #7c5cfc;
-}
-
-
-.btn-add {
-  padding: 14px 32px;
-  background: linear-gradient(135deg, #7c5cfc, #a855f7);
-  color: #ffffff;
-  font-size: 15px;
-  font-weight: 600;
-  border: none;
-  border-radius: 12px;
-  cursor: pointer;
-  white-space: nowrap;
-  transition: opacity 0.2s;
-}
-
-.btn-add:hover {
-  opacity: 0.88;
-}
+/* Container */
 .weekly-tracker {
-  margin-top: 30px;
-  background: #fff;
-  padding: 20px;
-  border-radius: 12px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  width: 100%;
+  min-height: 100vh;
+  padding: 30px 60px;
+  background: #f9f9fb;
 }
 
+/* Title */
 .weekly-tracker h2 {
-  margin-bottom: 15px;
-  color: #333;
+  text-align: center;
+  margin-bottom: 20px;
+  color: #222;
 }
 
-table {
+/* Table */
+.weekly-tracker table {
   width: 100%;
   border-collapse: collapse;
   text-align: center;
 }
 
-th {
-  background: #f3f4f6;
-  padding: 10px;
-  font-weight: 600;
-  color: #555;
+/* Header */
+.weekly-tracker th {
+  background: #ececf3;
+  padding: 12px;
+  font-size: 14px;
+  color: #444;
 }
 
-td {
-  padding: 10px;
-  border-top: 1px solid #eee;
+/* Cells */
+.weekly-tracker td {
+  padding: 12px;
+  border-top: 1px solid #ddd;
 }
 
-td:first-child {
+/* Habit column */
+.weekly-tracker td:first-child {
   text-align: left;
-  font-weight: 500;
+  font-weight: 600;
 }
 
-input[type="checkbox"] {
+/* Checkbox styling */
+.weekly-tracker input[type="checkbox"] {
   width: 18px;
   height: 18px;
   cursor: pointer;
-  accent-color: #6c63ff; 
 }
+
+/* Percentage column */
+.percentage {
+  font-weight: bold;
+  color: #4a4aff;
+}
+.weekly-tracker tbody tr:hover {
+  background: #f1f1ff;
+  transition: 0.2s;
+}
+.weekly-tracker table tr:first-child th:first-child {
+  border-top-left-radius: 8px;
+}
+

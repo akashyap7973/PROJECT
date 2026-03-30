@@ -56,3 +56,24 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 });
+function updatePercentage() {
+  const rows = document.querySelectorAll("tbody tr");
+
+  rows.forEach(row => {
+    const checkboxes = row.querySelectorAll(".day");
+    const percentageCell = row.querySelector(".percentage");
+
+    let checked = 0;
+
+    checkboxes.forEach(box => {
+      if (box.checked) checked++;
+    });
+
+    let percent = Math.round((checked / 7) * 100);
+    percentageCell.textContent = percent + "%";
+  });
+}
+
+document.querySelectorAll(".day").forEach(box => {
+  box.addEventListener("change", updatePercentage);
+});

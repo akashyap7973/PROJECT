@@ -20,7 +20,7 @@
         </ul>
     </nav>
 
-    <main class="container fade-in">
+     <main class="container fade-in">
         <header class="page-header">
             <h1>Daily Habits</h1>
             <p>Track your daily routines to build better habits.</p>
@@ -33,7 +33,7 @@
             </div>
             
             <ul class="item-list" id="habits-list">
-                <!-- Data populated dynamically via Javascript -->
+                
             </ul>
         </div>
     </main>
@@ -51,36 +51,43 @@
         <th>Fri</th>
         <th>Sat</th>
         <th>Sun</th>
+        <th>%</th> 
       </tr>
     </thead>
 
     <tbody>
       <tr>
         <td>Drink Water</td>
-        <td><input type="checkbox"></td>
-        <td><input type="checkbox"></td>
-        <td><input type="checkbox"></td>
-        <td><input type="checkbox"></td>
-        <td><input type="checkbox"></td>
-        <td><input type="checkbox"></td>
-        <td><input type="checkbox"></td>
+
+        <td><input type="checkbox" class="day"></td>
+        <td><input type="checkbox" class="day"></td>
+        <td><input type="checkbox" class="day"></td>
+        <td><input type="checkbox" class="day"></td>
+        <td><input type="checkbox" class="day"></td>
+        <td><input type="checkbox" class="day"></td>
+        <td><input type="checkbox" class="day"></td>
+
+        <td class="percentage">0%</td> 
       </tr>
 
       <tr>
         <td>Exercise</td>
-        <td><input type="checkbox"></td>
-        <td><input type="checkbox"></td>
-        <td><input type="checkbox"></td>
-        <td><input type="checkbox"></td>
-        <td><input type="checkbox"></td>
-        <td><input type="checkbox"></td>
-        <td><input type="checkbox"></td>
+
+        <td><input type="checkbox" class="day"></td>
+        <td><input type="checkbox" class="day"></td>
+        <td><input type="checkbox" class="day"></td>
+        <td><input type="checkbox" class="day"></td>
+        <td><input type="checkbox" class="day"></td>
+        <td><input type="checkbox" class="day"></td>
+        <td><input type="checkbox" class="day"></td>
+
+        <td class="percentage">0%</td>
       </tr>
     </tbody>
   </table>
 </div>
 
     <script src="js/global.js"></script>
-    <script src="js/habits.js"></script>
+    <script src="js/habit.js"></script>
 </body>
 </html>
