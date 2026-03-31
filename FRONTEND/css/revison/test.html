@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Integration Test</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>JavaScript Integration Test</h1>
+
+        <!-- Input Section -->
+        <section class="card">
+            <h2>User Form</h2>
+            <input type="text" id="nameInput" placeholder="Enter your name">
+            <input type="number" id="ageInput" placeholder="Enter your age">
+            <button id="submitBtn">Submit</button>
+            <p id="output"></p>
+        </section>
+
+        <!-- Counter Section -->
+        <section class="card">
+            <h2>Counter</h2>
+            <p id="counterValue">0</p>
+            <button id="increaseBtn">Increase</button>
+            <button id="decreaseBtn">Decrease</button>
+            <button id="resetBtn">Reset</button>
+        </section>
+
+        <!-- To-Do Section -->
+        <section class="card">
+            <h2>To-Do List</h2>
+            <input type="text" id="taskInput" placeholder="Enter a task">
+            <button id="addTaskBtn">Add Task</button>
+            <ul id="taskList"></ul>
+        </section>
+
+        <!-- Theme Section -->
+        <section class="card">
+            <h2>Theme</h2>
+            <button id="themeBtn">Toggle Dark Mode</button>
+        </section>
+
+        <!-- Image Section -->
+        <section class="card">
+            <h2>Image Preview</h2>
+            <input type="text" id="imageUrl" placeholder="Paste image URL">
+            <button id="showImageBtn">Show Image</button>
+            <div class="image-box">
+                <img id="previewImage" src="" alt="Preview">
+            </div>
+        </section>
+
+    </div>
+
+    <script src="test.js"></script>
+
+<style>
+    * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: #f4f4f4;
+    padding: 30px;
+    transition: 0.3s;
+}
+
+.container {
+    max-width: 900px;
+    margin: auto;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #333;
+}
+
+.card {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.card h2 {
+    margin-bottom: 15px;
+    color: #444;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+}
+
+button {
+    padding: 10px 16px;
+    border: none;
+    border-radius: 8px;
+    background: #4f46e5;
+    color: white;
+    cursor: pointer;
+    margin-right: 8px;
+    margin-top: 5px;
+}
+
+button:hover {
+    background: #3730a3;
+}
+
+#counterValue {
+    font-size: 28px;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+#taskList {
+    margin-top: 10px;
+    list-style: none;
+}
+
+#taskList li {
+    background: #eee;
+    padding: 10px;
+    margin-bottom: 8px;
+    border-radius: 6px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.image-box {
+    margin-top: 15px;
+}
+
+#previewImage {
+    width: 100%;
+    max-width: 300px;
+    display: none;
+    border-radius: 10px;
+}
+
+.dark-mode {
+    background: #1e1e1e;
+    color: white;
+}
+
+.dark-mode .card {
+    background: #2c2c2c;
+}
+
+.dark-mode h1,
+.dark-mode .card h2 {
+    color: white;
+}
+</style>
+</body>
+</html>
+
